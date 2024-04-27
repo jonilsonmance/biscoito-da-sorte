@@ -1,0 +1,140 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+  --fontFam-text-One:"Montserrat", sans-serif;
+  --fontFam-text-Two:"DM Sans", sans-serif;
+
+  --color-Text-One:#34355B;
+  --color-Text-Two: #FFFFFF;
+
+  --fontzn-text-One: 1.6rem;
+  --fontzn-text-Two: 2.4rem;
+  --fontzn-text-Tree: 1.5rem;
+
+  --color-bg-One: #34355B;
+  --color-bg-Two: #FFFFFF;
+  --color-bg-Tree:#FF9500;
+  --color-bg-For:#F4CD9A;
+}
+
+body{
+  font-size: var(--fontzn-text-One);
+  background: linear-gradient(to top right, #190361 0%, #BB00FF 100%);
+  box-shadow: 0 .4rem .8rem rgba(0, 0, 0, 0.1);
+  height: 100vh;
+
+  display: grid;
+  place-items: center;
+
+}
+
+body {
+  background: linear-gradient(45deg, #190361, #bb00ff);
+  animation: gradient 10s ease infinite;
+  background-size: 200% 200%;
+}
+
+@keyframes gradient {
+0% {
+  background-position: 0% 50%;
+}
+50% {
+  background-position: 100% 50%;
+}
+100% {
+  background-position: 0% 50%;
+}
+}
+
+main{
+  background: var(--color-bg-Two);
+  box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.1);
+  border-radius: .5rem;
+  padding: 4.8rem 6.4rem 6.4rem;
+  margin-top: -12rem;
+
+  width: min(42.8rem, 90%);
+}
+
+.hide{
+  display: none;
+}
+
+div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+div img{
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+@keyframes tremor {
+  0% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+  100% { transform: rotate(-2deg); }
+}
+
+#cookies-whole:hover{
+  animation: tremor 0.1s linear infinite;
+}
+
+ h1{
+  font-size: var(--fontzn-text-Two);
+  font-family: var(--fontFam-text-One);
+  color: var(--color-Text-One);
+
+  
+  text-align: center;
+  margin-bottom: 1.4rem;
+
+}
+
+ p{
+  font-size: var(--fontzn-text-Tree);
+  color: var(--color-Text-One);
+  text-align: center;
+
+  margin-bottom: 2.0rem;
+
+}
+
+ button{
+  border: none;
+  background: var(--color-bg-Tree);
+  padding: 1.6rem;
+  border-radius: .4rem;
+  color: var(--color-Text-Two);
+  font-family: var(--fontFam-text-Two);
+  font-size: var(--fontzn-text-Tree);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover{
+  background: var(--color-bg-For);
+}
+
+
+@keyframes animacao {
+  from {
+    opacity: 0;
+    transform: translateY(100%) scale(0.1); 
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1); 
+  }
+}
+
+#msg {
+  animation: animacao 1.5s ease;
+}
